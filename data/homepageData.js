@@ -59,17 +59,17 @@ export const featuredWork = [
   {
     title: "Biomorphic Workspace Motion",
     tag: "Motion Design",
-    gradient: "from-indigo-600/30 via-purple-900/20 to-[#0b0c1c]",
+    gradient: "from-cyan-600/30 via-indigo-950/40 to-[#0B0F19]",
   },
   {
     title: "Digital Interface Sphere",
     tag: "Product Design",
-    gradient: "from-purple-600/30 via-blue-900/20 to-[#0b0c1c]",
+    gradient: "from-indigo-600/30 via-violet-950/40 to-[#0B0F19]",
   },
   {
     title: "Ceramic Studio Concept",
     tag: "Branding & Web",
-    gradient: "from-blue-600/30 via-indigo-900/20 to-[#0b0c1c]",
+    gradient: "from-sky-600/30 via-blue-950/40 to-[#0B0F19]",
   },
 ];
 

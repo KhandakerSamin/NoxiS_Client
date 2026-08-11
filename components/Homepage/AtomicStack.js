@@ -76,16 +76,16 @@ export default function AtomicStack() {
   return (
     <section
       id="technologies"
-      className="relative bg-[#0c0d1a] border-y border-white/5 py-24 px-6 md:px-12 lg:px-24 overflow-hidden"
+      className="relative bg-[#12103E] border-y border-white/10 py-24 px-6 md:px-12 lg:px-24 overflow-hidden"
     >
       {/* Background Soft Glow Ambient Light */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -right-32 top-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-purple-900/10 rounded-full blur-[150px]" />
-        <div className="absolute -left-32 top-1/2 -translate-y-1/2 w-[450px] h-[450px] bg-indigo-900/10 rounded-full blur-[130px]" />
+        <div className="absolute -right-32 top-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-[#00A3FF]/15 rounded-full blur-[150px]" />
+        <div className="absolute -left-32 top-1/2 -translate-y-1/2 w-[450px] h-[450px] bg-[#0B0F19]/60 rounded-full blur-[130px]" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        {/* Left Side Header (Matching Reference Design Layout) */}
+        {/* Left Side Header */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -94,25 +94,25 @@ export default function AtomicStack() {
           className="lg:col-span-5"
         >
           <div className="flex items-center gap-2 mb-4">
-            <span className="w-5 h-[1px] bg-indigo-400" />
-            <span className="text-xs font-semibold tracking-widest text-indigo-400 uppercase font-nav">
+            <span className="w-5 h-[1.5px] bg-[#E4FA00]" />
+            <span className="text-xs font-bold tracking-widest text-[#E4FA00] uppercase font-nav">
               TECHNOLOGY
             </span>
           </div>
 
-          <h2 className="font-heading font-bold text-4xl md:text-6xl tracking-tight leading-[1.08] text-text-primary uppercase">
+          <h2 className="font-heading font-bold text-4xl md:text-6xl tracking-tight leading-[1.08] text-white uppercase">
             OUR <br />
-            ATOMIC <br />
+            <span className="gradient-text">ATOMIC</span> <br />
             STACK
           </h2>
 
-          <p className="text-text-secondary mt-6 text-sm md:text-base leading-relaxed max-w-md font-nav">
+          <p className="text-gray-300 mt-6 text-sm md:text-base leading-relaxed max-w-md font-nav">
             Engineered for speed, security, and scalability. We utilize a modern toolkit
             to build future-proof digital products.
           </p>
         </motion.div>
 
-        {/* Right Side: 3x3 Technology Cards Grid (Matching Reference Image Design) */}
+        {/* Right Side: 3x3 Technology Cards Grid */}
         <motion.div
           initial="hidden"
           whileInView="show"
@@ -128,12 +128,12 @@ export default function AtomicStack() {
                 show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
               }}
               whileHover={{ y: -4, scale: 1.02 }}
-              className="group bg-[#111224]/80 hover:bg-[#161832] border border-white/10 hover:border-indigo-500/50 rounded-none p-4 sm:p-5 transition-all duration-300 backdrop-blur-md shadow-sm hover:shadow-[0_8px_25px_rgba(99,102,241,0.18)] flex items-center gap-3.5 cursor-pointer"
+              className="group bg-[#0B0F19]/90 hover:bg-[#0B0F19] border border-white/15 hover:border-[#00A3FF] rounded-none p-4 sm:p-5 transition-all duration-300 backdrop-blur-md shadow-md hover:shadow-[0_8px_25px_rgba(0,163,255,0.25)] flex items-center gap-3.5 cursor-pointer"
             >
-              <div className="w-9 h-9 rounded-none bg-indigo-950/60 border border-indigo-500/25 flex items-center justify-center text-indigo-400 group-hover:text-white group-hover:bg-gradient-primary group-hover:border-transparent transition-all duration-300 shrink-0">
+              <div className="w-9 h-9 rounded-none bg-[#00A3FF]/15 border border-[#00A3FF]/40 flex items-center justify-center text-[#00A3FF] group-hover:text-white group-hover:bg-[#00A3FF] group-hover:border-transparent transition-all duration-300 shrink-0">
                 {renderTechIcon(item.icon)}
               </div>
-              <span className="font-heading font-bold text-xs sm:text-sm tracking-wider text-text-primary group-hover:text-white transition-colors uppercase">
+              <span className="font-heading font-bold text-xs sm:text-sm tracking-wider text-white group-hover:text-[#E4FA00] transition-colors uppercase">
                 {item.name}
               </span>
             </motion.div>

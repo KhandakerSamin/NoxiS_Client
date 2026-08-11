@@ -36,12 +36,12 @@ function AnimatedCounter({ value, duration = 2.2 }) {
 
 export default function StatsBar() {
   return (
-    <section className="relative bg-[#060713] py-20 px-6 md:px-12 lg:px-24 overflow-hidden border-y border-white/10">
+    <section className="relative bg-[#12103E] py-20 px-6 md:px-12 lg:px-24 overflow-hidden border-y border-white/10">
       {/* Background Eye-Catchy Ambient Glow & Radial Mesh */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-900/15 rounded-full blur-[150px]" />
-        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-purple-900/15 rounded-full blur-[150px]" />
-        <div className="absolute inset-0 bg-[radial-gradient(#1e1b4b_1px,transparent_1px)] [background-size:24px_24px] opacity-20" />
+        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-[#00A3FF]/15 rounded-full blur-[150px]" />
+        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-[#0B0F19]/60 rounded-full blur-[150px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.15)_1px,transparent_1px)] [background-size:24px_24px] opacity-20" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
@@ -63,10 +63,10 @@ export default function StatsBar() {
                 show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
               }}
               whileHover={{ y: -6, scale: 1.02 }}
-              className="group relative bg-[#0c0d1e]/90 hover:bg-[#101228] border border-white/10 hover:border-indigo-500/50 p-6 sm:p-8 backdrop-blur-md shadow-xl transition-all duration-300 hover:shadow-[0_15px_40px_rgba(99,102,241,0.2)] rounded-none flex flex-col items-center justify-center overflow-hidden"
+              className="group relative bg-[#0B0F19]/90 hover:bg-[#0B0F19] border border-white/15 hover:border-[#00A3FF] p-6 sm:p-8 backdrop-blur-md shadow-xl transition-all duration-300 hover:shadow-[0_15px_40px_rgba(0,163,255,0.25)] rounded-none flex flex-col items-center justify-center overflow-hidden"
             >
               {/* Top Glowing Gradient Accent Line */}
-              <div className="w-full h-[2px] bg-gradient-primary absolute top-0 left-0 opacity-70 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="w-full h-[3px] bg-gradient-to-r from-[#00A3FF] to-[#E4FA00] absolute top-0 left-0 opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
 
               {/* Animated Counter Metric */}
               <p className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl gradient-text mb-2 tracking-tight">
@@ -74,7 +74,7 @@ export default function StatsBar() {
               </p>
 
               {/* Stat Label */}
-              <p className="text-xs sm:text-sm font-semibold text-text-secondary group-hover:text-white transition-colors tracking-widest uppercase font-nav">
+              <p className="text-xs sm:text-sm font-bold text-gray-300 group-hover:text-[#E4FA00] transition-colors tracking-widest uppercase font-nav">
                 {stat.label}
               </p>
             </motion.div>

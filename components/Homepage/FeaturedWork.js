@@ -112,10 +112,10 @@ const renderProjectIllustration = (idx) => {
 
 export default function FeaturedWork() {
   return (
-    <section id="work" className="relative bg-[#080812] py-24 px-6 md:px-12 lg:px-24 overflow-hidden border-t border-white/5">
+    <section id="work" className="relative bg-[#0B0F19] py-24 px-6 md:px-12 lg:px-24 overflow-hidden border-t border-white/10">
       {/* Background Soft Glow Ambient Light */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-900/10 rounded-full blur-[160px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#12103E]/80 rounded-full blur-[160px]" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
@@ -129,8 +129,8 @@ export default function FeaturedWork() {
               transition={{ duration: 0.5 }}
               className="flex items-center gap-2 mb-3"
             >
-              <span className="w-5 h-[1px] bg-indigo-400" />
-              <span className="text-xs font-semibold tracking-widest text-indigo-400 uppercase font-nav">
+              <span className="w-5 h-[1.5px] bg-[#00A3FF]" />
+              <span className="text-xs font-bold tracking-widest text-[#00A3FF] uppercase font-nav">
                 PORTFOLIO SHOWCASE
               </span>
             </motion.div>
@@ -140,7 +140,7 @@ export default function FeaturedWork() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight text-text-primary"
+              className="font-heading font-bold text-3xl md:text-5xl uppercase tracking-tight text-white"
             >
               FEATURED <span className="gradient-text">WORK</span>
             </motion.h2>
@@ -155,7 +155,7 @@ export default function FeaturedWork() {
           >
             <a
               href="#contact"
-              className="font-nav border border-border-subtle hover:border-indigo-500/50 bg-bg-card/40 backdrop-blur-md px-6 py-3 rounded-none text-sm font-medium hover:text-white transition-all shadow-sm flex items-center gap-2 group whitespace-nowrap"
+              className="font-nav border border-white/20 hover:border-[#00A3FF] bg-[#12103E]/60 backdrop-blur-md px-6 py-3 rounded-none text-sm font-semibold text-white transition-all shadow-sm flex items-center gap-2 group whitespace-nowrap"
             >
               <span>See Our Work</span>
               <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
@@ -184,8 +184,8 @@ export default function FeaturedWork() {
               whileHover={{ y: -6 }}
               className="group cursor-pointer text-left"
             >
-              {/* Minimal Box Preview Container (Sharp Box / Rectangular Frame with Vector Illustration) */}
-              <div className="aspect-[4/3] w-full bg-[#0d0e1c] border border-white/10 group-hover:border-indigo-500/50 relative overflow-hidden mb-5 transition-all duration-300 shadow-md group-hover:shadow-[0_10px_30px_rgba(99,102,241,0.15)] flex items-center justify-center p-5 rounded-none">
+              {/* Minimal Box Preview Container */}
+              <div className="aspect-[4/3] w-full bg-[#12103E]/90 border border-white/15 group-hover:border-[#00A3FF] relative overflow-hidden mb-5 transition-all duration-300 shadow-md group-hover:shadow-[0_10px_30px_rgba(0,163,255,0.25)] flex items-center justify-center p-5 rounded-none">
                 {/* Gradient Box Sheen Overlay */}
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-50 group-hover:opacity-100 transition-opacity duration-500`}
@@ -196,10 +196,10 @@ export default function FeaturedWork() {
               </div>
 
               {/* Minimal Text Info Below Box */}
-              <p className="text-[11px] font-semibold tracking-wider text-indigo-400 uppercase font-nav mb-1">
+              <p className="text-[11px] font-bold tracking-wider text-[#E4FA00] uppercase font-nav mb-1">
                 {project.tag}
               </p>
-              <h3 className="font-heading font-semibold text-lg text-text-primary group-hover:text-white transition-colors">
+              <h3 className="font-heading font-bold text-lg text-white group-hover:text-[#00A3FF] transition-colors">
                 {project.title}
               </h3>
             </motion.div>
@@ -216,7 +216,7 @@ export default function FeaturedWork() {
         >
           <a
             href="#contact"
-            className="font-nav bg-gradient-primary text-white text-base font-medium px-9 py-3.5 rounded-none hover:shadow-glow transition-all duration-300 shadow-xl inline-flex items-center gap-3 group"
+            className="font-nav bg-[#00A3FF] hover:bg-[#008ADB] text-white text-base font-bold uppercase tracking-wider px-9 py-3.5 rounded-none hover:shadow-glow transition-all duration-300 shadow-xl shadow-[#00A3FF]/25 inline-flex items-center gap-3 group"
           >
             <span>See Our Work</span>
             <span className="group-hover:translate-x-1.5 transition-transform duration-300">→</span>

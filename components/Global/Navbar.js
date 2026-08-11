@@ -35,7 +35,7 @@ export default function Navbar() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
           scrolled
-            ? "bg-bg-primary/80 backdrop-blur-md   shadow-lg"
+            ? "bg-[#0B0F19]/85 backdrop-blur-md  shadow-xl"
             : "bg-transparent"
         }`}
       >
@@ -45,17 +45,17 @@ export default function Navbar() {
             href="#"
             className="font-logo font-bold text-xl md:text-2xl tracking-wider flex items-center gap-0.5 group"
           >
-            <span className="text-text-primary group-hover:text-accent-blue transition-colors">Noxi</span>
+            <span className="text-white group-hover:text-cyanBlue transition-colors">Noxi</span>
             <span className="gradient-text font-black">S</span>
           </a>
 
-          {/* Desktop Navlinks (Different font than logo font) */}
+          {/* Desktop Navlinks */}
           <ul className="hidden md:flex items-center gap-8 font-nav">
             {navLinks.map((link) => (
               <li key={link.label}>
                 <a
                   href={link.href}
-                  className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors tracking-wide"
+                  className="text-sm font-medium text-gray-300 hover:text-white transition-colors tracking-wide"
                 >
                   {link.label}
                 </a>
@@ -66,7 +66,7 @@ export default function Navbar() {
           {/* Desktop CTA Button */}
           <a
             href="#contact"
-            className="hidden md:inline-block font-nav bg-gradient-primary text-white text-sm font-medium px-6 py-2.5 rounded-none hover:shadow-glow transition-all duration-300"
+            className="hidden md:inline-block font-nav bg-gradient-primary text-white text-sm font-semibold px-6 py-2.5 rounded-none hover:shadow-glow transition-all duration-300 shadow-md shadow-cyanBlue/20"
           >
             Get Started
           </a>
@@ -75,7 +75,7 @@ export default function Navbar() {
           <button
             onClick={toggleMenu}
             aria-label="Toggle navigation menu"
-            className="md:hidden p-2.5 text-text-primary hover:text-accent-blue focus:outline-none z-50 rounded-lg border border-border-subtle bg-bg-card/50 backdrop-blur-sm"
+            className="md:hidden p-2.5 text-white hover:text-cyanBlue focus:outline-none z-50 rounded-none border border-white/15 bg-violet/60 backdrop-blur-sm"
           >
             <svg
               className="w-6 h-6 stroke-current"
@@ -103,78 +103,79 @@ export default function Navbar() {
         </nav>
       </motion.header>
 
-      {/* Phone & Tablet Responsive Modal Pop-up Navigation Menu */}
+      {/* Phone & Tablet Responsive Centered Modal Navigation Menu */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed inset-0 z-50 bg-bg-primary/95 backdrop-blur-2xl flex flex-col justify-between p-6 sm:p-10 md:hidden"
-          >
-            {/* Top Logo and Close Button in Modal */}
-            <div className="flex items-center justify-between w-full  border-border-subtle pb-4">
-              <a
-                href="#"
-                onClick={() => setIsOpen(false)}
-                className="font-logo font-bold text-2xl tracking-wider uppercase flex items-center gap-0.5"
-              >
-                <span className="text-text-primary">Noxi</span>
-                <span className="gradient-text font-black">S</span>
-              </a>
+          <>
+            {/* Dark Backdrop Overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.25 }}
+              onClick={() => setIsOpen(false)}
+              className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm md:hidden"
+            />
 
+            {/* Centered Compact Modal Card */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="fixed z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85vw] max-w-[320px] bg-[#0B0F19]/95 backdrop-blur-2xl border border-white/10 rounded-2xl shadow-2xl shadow-[#00A3FF]/10 p-6 md:hidden"
+            >
+              {/* Close Button */}
               <button
                 onClick={() => setIsOpen(false)}
                 aria-label="Close navigation menu"
-                className="p-2 text-text-primary hover:text-accent-purple rounded-full border border-border-subtle bg-bg-card"
+                className="absolute top-4 right-4 p-1.5 text-gray-400 hover:text-white transition-colors"
               >
-                <svg
-                  className="w-6 h-6 stroke-current"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M6 18L18 6M6 6l12 12"
-                  />
+                <svg className="w-5 h-5 stroke-current" fill="none" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
-            </div>
 
-            {/* Center Aligned Nav Links */}
-            <div className="flex flex-col items-center justify-center gap-6 my-auto font-nav text-center">
-              {navLinks.map((link, idx) => (
-                <motion.a
-                  key={link.label}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.08 * idx, duration: 0.3 }}
-                  className="text-2xl font-semibold text-text-primary hover:text-accent-blue transition-colors tracking-wide py-1"
-                >
-                  {link.label}
-                </motion.a>
-              ))}
-            </div>
+              {/* Logo */}
+              <a
+                href="#"
+                onClick={() => setIsOpen(false)}
+                className="font-logo font-bold text-xl tracking-wider flex items-center gap-0.5 mb-6"
+              >
+                <span className="text-white">Noxi</span>
+                <span className="gradient-text font-black">S</span>
+              </a>
 
-            {/* CTA Button Down Below Navlinks */}
-            <div className="flex flex-col items-center w-full pt-4 border-t border-border-subtle">
+              {/* Nav Links */}
+              <div className="flex flex-col gap-1 mb-6">
+                {navLinks.map((link, idx) => (
+                  <motion.a
+                    key={link.label}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    initial={{ opacity: 0, x: -12 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.06 * idx, duration: 0.25 }}
+                    className="text-sm font-medium text-gray-300 hover:text-white hover:bg-white/5 transition-all tracking-wide py-2.5 px-3 rounded-lg font-nav"
+                  >
+                    {link.label}
+                  </motion.a>
+                ))}
+              </div>
+
+              {/* CTA Button */}
               <motion.a
                 href="#contact"
                 onClick={() => setIsOpen(false)}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.35, duration: 0.3 }}
-                className="w-full max-w-xs font-nav bg-gradient-primary text-white text-base font-medium py-3.5 rounded-none text-center hover:shadow-glow transition-all duration-300 shadow-md"
+                transition={{ delay: 0.3, duration: 0.25 }}
+                className="block w-full font-nav bg-[#00A3FF] text-white text-sm font-semibold py-3 rounded-lg text-center hover:bg-[#008ADB] transition-colors shadow-md shadow-[#00A3FF]/20"
               >
                 Get Started
               </motion.a>
-            </div>
-          </motion.div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </>

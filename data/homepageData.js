@@ -1,49 +1,76 @@
 export const masteryCards = [
   {
-    title: "Design Architecture",
-    desc: "Structural design systems engineered for scale and clarity.",
-    points: ["Design Systems", "UX Research", "Visual Language"],
+    id: "product-design",
+    title: "Product Design",
+    desc: "Crafting high-fidelity design systems and immersive digital products that define industry-leading brand identities.",
+    points: ["Design Systems", "Brand Architecture", "Prototyping & Motion"],
+    icon: "layers",
   },
   {
-    title: "Rapid Pen Engineering",
-    desc: "Prototyping and engineering pipelines built for speed.",
-    points: ["Prototyping", "Agile Delivery", "QA Automation"],
+    id: "web-development",
+    title: "Web Development",
+    desc: "Deploying performant, scalable full-stack web applications with modern frameworks and edge architecture.",
+    points: ["React / Next.js", "Serverless Architecture", "Performance Optimization"],
+    icon: "code",
   },
   {
-    title: "Web Visualization",
-    desc: "Immersive, data-rich web experiences that convert.",
-    points: ["3D & WebGL", "Interactive UI", "Motion Design"],
+    id: "app-development",
+    title: "App Development",
+    desc: "Building high-performance native and cross-platform mobile applications that dominate app store user retention.",
+    points: ["iOS & Android", "React Native / Flutter", "Native Performance"],
+    icon: "smartphone",
   },
   {
-    title: "Cloud Strategy",
-    desc: "Infrastructure roadmaps engineered for reliability.",
-    points: ["Cloud Migration", "DevOps", "Scalable Infra"],
+    id: "ui-ux-design",
+    title: "UI/UX Design",
+    desc: "Human-centered experience design, user research, interactive wireframing, and psychological interface design.",
+    points: ["UX Psychology", "User Testing & Journeys", "Interface Aesthetics"],
+    icon: "layout",
   },
   {
-    title: "Cyber Security",
-    desc: "Security-first architecture across every layer.",
-    points: ["Threat Modeling", "Pen Testing", "Compliance"],
+    id: "ai-innovation",
+    title: "AI Innovation",
+    desc: "Integrating custom AI agents, LLM pipelines, and intelligent automation into core digital workflows.",
+    points: ["Custom AI Agents", "LLM Integration", "Predictive Automation"],
+    icon: "sparkles",
   },
   {
-    title: "Mobile Ecosystem",
-    desc: "Native and cross-platform apps built to perform.",
-    points: ["iOS & Android", "Cross-Platform", "App Optimization"],
+    id: "cloud-architecture",
+    title: "Cloud Architecture",
+    desc: "Orchestrating resilient cloud infrastructures that ensure zero downtime, military-grade security, and global scale.",
+    points: ["AWS / GCP / Azure", "DevOps & CI/CD", "Scalable Microservices"],
+    icon: "cloud",
   },
 ];
 
 export const stackItems = [
-  "IT SECURITY",
-  "SEO",
-  "UI/UX",
-  "CLOUD",
-  "DATA",
-  "DEVOPS",
+  { name: "TYPESCRIPT", icon: "typescript" },
+  { name: "NEXT.JS", icon: "nextjs" },
+  { name: "POSTGRES", icon: "postgres" },
+  { name: "DOCKER", icon: "docker" },
+  { name: "GRAPHQL", icon: "graphql" },
+  { name: "TAILWIND", icon: "tailwind" },
+  { name: "REACT NATIVE", icon: "reactnative" },
+  { name: "PYTHON AI", icon: "python" },
+  { name: "VERCEL", icon: "vercel" },
 ];
 
 export const featuredWork = [
-  { title: "Biomorphic Workspace Motion", tag: "Motion Design" },
-  { title: "Digital Interface Sphere", tag: "Product Design" },
-  { title: "Ceramic Studio Concept", tag: "Branding" },
+  {
+    title: "Biomorphic Workspace Motion",
+    tag: "Motion Design",
+    gradient: "from-indigo-600/30 via-purple-900/20 to-[#0b0c1c]",
+  },
+  {
+    title: "Digital Interface Sphere",
+    tag: "Product Design",
+    gradient: "from-purple-600/30 via-blue-900/20 to-[#0b0c1c]",
+  },
+  {
+    title: "Ceramic Studio Concept",
+    tag: "Branding & Web",
+    gradient: "from-blue-600/30 via-indigo-900/20 to-[#0b0c1c]",
+  },
 ];
 
 export const statsData = [
@@ -54,35 +81,50 @@ export const statsData = [
 ];
 
 export const precisionSteps = [
-  { number: "01", title: "Discover Target", desc: "We define goals, audience, and market opportunity." },
-  { number: "02", title: "Architecture Design", desc: "Blueprints and systems designed for scale." },
-  { number: "03", title: "Ideal Impact", desc: "Build and refine for maximum performance." },
-  { number: "04", title: "Launch & Scale", desc: "Deploy, measure, and grow with confidence." },
+  {
+    number: "01",
+    title: "DISCOVERY & AUDIT",
+    desc: "Deep dive into technical debt, business goals, and user friction points to map the trajectory.",
+  },
+  {
+    number: "02",
+    title: "ARCHITECTURAL DESIGN",
+    desc: "High-fidelity wireframing and atomic design systems prioritized before code is written.",
+  },
+  {
+    number: "03",
+    title: "AGILE SPRINTS",
+    desc: "Rapid engineering cycles with daily deployment and continuous QA integration.",
+  },
+  {
+    number: "04",
+    title: "LAUNCH & SCALE",
+    desc: "Precision deployment sequences followed by data-driven monitoring and post-launch growth.",
+  },
 ];
 
 export const faqData = [
   {
-    q: "How is your challenge unique?",
-    a: "We combine strategic architecture with hands-on engineering to solve problems others only theorize about.",
+    q: "What is your typical project timeline?",
+    a: "Engagements typically range from 8 to 24 weeks depending on architectural complexity. Our agile methodology ensures we deliver MVPs in record time without compromising quality.",
   },
   {
-    q: "Where does your knowledge come from?",
-    a: "A decade of cross-industry delivery across design, cloud, and security disciplines.",
+    q: "How do you handle data privacy and security?",
+    a: "We adhere to enterprise-grade security protocols including SOC2, GDPR compliance, end-to-end encryption, and rigorous penetration testing before any deployment.",
   },
   {
-    q: "Do you offer post-launch support?",
-    a: "Yes — ongoing optimization, monitoring, and iteration are part of every engagement.",
+    q: "Do you offer post-launch maintenance?",
+    a: "Yes, we provide continuous monitoring, performance optimization, security updates, and SLA-backed maintenance packages tailored to your system requirements.",
   },
   {
-    q: "Can we support ongoing engineering needs?",
-    a: "Absolutely. We scale teams up or down based on your roadmap and velocity needs.",
+    q: "Can you augment our existing engineering team?",
+    a: "Absolutely. We seamlessly integrate with in-house design and engineering teams to accelerate feature delivery, establish best practices, and scale infrastructure.",
   },
 ];
 
 export const navLinks = [
-  { label: "About Us", href: "#about" },
-  { label: "Technologies", href: "#technologies" },
-  { label: "Singles", href: "#singles" },
+  { label: "Home", href: "#" },
   { label: "Services", href: "#services" },
-  { label: "Store", href: "#store" },
+  { label: "Work", href: "#work" },
+  { label: "About", href: "#about" },
 ];

@@ -22,6 +22,22 @@ body {
   font-family: var(--font-inter), sans-serif;
 }
 
+.font-logo {
+  font-family: var(--font-orbitron), sans-serif;
+}
+
+.font-nav {
+  font-family: var(--font-sora), var(--font-inter), sans-serif;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+}
+
+.hover\:shadow-glow:hover {
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.4);
+}
+
 .gradient-text {
   background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
   -webkit-background-clip: text;

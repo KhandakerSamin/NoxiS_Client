@@ -1,5 +1,6 @@
 import Hero from "@/components/Homepage/Hero";
 import DigitalMastery from "@/components/Homepage/DigitalMastery";
+import Pricing from "@/components/Homepage/Pricing";
 import AtomicStack from "@/components/Homepage/AtomicStack";
 import ImpactfulTransformations from "@/components/Homepage/ImpactfulTransformations";
 import FeaturedWork from "@/components/Homepage/FeaturedWork";
@@ -13,6 +14,7 @@ export default function Home() {
     <main className="overflow-hidden">
       <Hero />
       <DigitalMastery />
+      <Pricing />
       <AtomicStack />
       <ImpactfulTransformations />
       <FeaturedWork />

@@ -1,16 +1,11 @@
-import { Inter, Sora, Orbitron } from "next/font/google";
+import { Raleway, Orbitron } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Global/Navbar";
 import Footer from "@/components/Global/Footer";
 
-const inter = Inter({
+const raleway = Raleway({
   subsets: ["latin"],
-  variable: "--font-inter",
-});
-
-const sora = Sora({
-  subsets: ["latin"],
-  variable: "--font-sora",
+  variable: "--font-raleway",
 });
 
 const orbitron = Orbitron({
@@ -28,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${sora.variable} ${orbitron.variable} font-body bg-bg-primary text-text-primary antialiased`}
+        className={`${raleway.variable} ${orbitron.variable} font-body bg-bg-primary text-text-primary antialiased`}
       >
         <Navbar />
         {children}

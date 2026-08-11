@@ -58,7 +58,7 @@ export default function Footer() {
             {/* Same Logo Copy from Navbar */}
             <a
               href="#"
-              className="font-logo font-bold text-xl md:text-2xl tracking-wider flex items-center gap-0.5 group inline-block"
+              className="font-logo font-bold text-xl md:text-[27px] tracking-wider flex items-center gap-0.5 group inline-block"
             >
               <span className="text-white group-hover:text-[#00A3FF] transition-colors">Noxi</span>
               <span className="gradient-text font-black">S</span>

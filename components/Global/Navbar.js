@@ -43,7 +43,7 @@ export default function Navbar() {
           {/* Top Logo with Logo Font */}
           <a
             href="#"
-            className="font-logo font-bold text-xl md:text-2xl tracking-wider flex items-center gap-0.5 group"
+            className="font-logo font-bold text-xl md:text-[27px] tracking-wider flex items-center gap-0.5 group"
           >
             <span className="text-white group-hover:text-cyanBlue transition-colors">Noxi</span>
             <span className="gradient-text font-black">S</span>
@@ -55,9 +55,10 @@ export default function Navbar() {
               <li key={link.label}>
                 <a
                   href={link.href}
-                  className="text-sm font-medium text-gray-300 hover:text-white transition-colors tracking-wide"
+                  className="text-sm font-medium text-gray-300 hover:text-[#E4FA00] transition-colors tracking-wide relative group py-1"
                 >
-                  {link.label}
+                  <span>{link.label}</span>
+                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#E4FA00] transition-all duration-300 group-hover:w-full" />
                 </a>
               </li>
             ))}
@@ -68,7 +69,7 @@ export default function Navbar() {
             href="#contact"
             className="hidden md:inline-block font-nav bg-gradient-primary text-white text-sm font-semibold px-6 py-2.5 rounded-none hover:shadow-glow transition-all duration-300 shadow-md shadow-cyanBlue/20"
           >
-            Get Started
+            Let's Collaborate
           </a>
 
           {/* Phone & Tablet Hamburger Toggle Button */}
